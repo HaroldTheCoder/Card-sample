@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(233, 47%, 7%);
+    color: hsla(0, 0%, 100%, 0.75);
+    padding: 10em;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1, h3 {
+    color: hsl(0, 0%, 100%);
+}
+h1 {
+    font-size: 2.90em;
+}
+span {
+    color: hsl(277, 64%, 61%);
+}
+#main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 0.50em;
+}
+#card-container {
+    display: grid;
+    grid-template-areas: "left right right";
+    border-radius: 0.50em;
+}
+.left-column {
+    grid-area: left;
+    padding: 4em;
+}
+.main-paragraph {
+    padding: 2em 0 2em 0;
+    width: 80%;
+    line-height: 1.70em;
+    
+}
+.card-statistics {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row;
+    width: 73%;
+    padding-top: 1.60em;
+}
+.statistics p {
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.80em;
+    letter-spacing: 2px;
+    padding-top: 0.50em;
+    color: hsla(0, 0%, 100%, 0.6)
+;
+}
+.right-column {
+    grid-area: right;
+    position: relative;
+    border-radius: 0.50em;
+}
+.right-column::after {
+    position: absolute;
+    content: "";
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+     background: linear-gradient(hsla(277, 80%, 30%, 0.575), hsla(277, 80%, 30%, 0.575));
+}
+img {
+    height: 100%;
+    width: 100%;
+    border-bottom-right-radius: 0.50em;
+    border-top-right-radius: 0.50em;
+}
+.img-mobile {
+    display: none;
+}
+.attribution {
+    margin-top: 50%;
+    text-align: center;
+}
+@media screen and (max-width: 390px){
+    h1 {
+        font-size: 2em;
+    }
+    body {
+        text-align: center;
+        padding: 7em 2em 7em 2em;
+    }
+    img:first-of-type {
+        display: none;
+    }
+    .img-mobile {
+        display: block;
+        border-top-left-radius: 0.50em;
+        border-top-right-radius: 0.50em;
+    }
+    #card-container {
+    display: grid;
+    grid-template-areas: "right right"
+                            "left left";
+}
+.left-column {
+    grid-area: left;
+    padding: 3em 1em 3em 1em;
+}
+.main-paragraph {
+    padding: 2em 0 2em 0;
+    width: 80%;
+    margin: auto;
+    line-height: 1.70em;
+    
+}
+.card-statistics {
+    flex-flow: column;
+    width: 100%;
+    padding-top: 1.60em;
+}
+.statistics {
+    margin-bottom: 10%;
+}
+}
