@@ -16,6 +16,9 @@ body {
 h1, h3 {
     color: hsl(0, 0%, 100%);
 }
+h3 {
+    font-size: 1.60em;
+}
 h1 {
     font-size: 2.90em;
 }
@@ -83,10 +86,6 @@ img {
 }
 .img-mobile {
     display: none;
-}
-.attribution {
-    margin-top: 50%;
-    text-align: center;
 }
 @media screen and (max-width: 390px){
     h1 {
